@@ -1,4 +1,3 @@
-let url1="https://geocoding-api.open-meteo.com/v1/search?name=Chandigarh&count=10&language=en&format=json";
 let option=document.querySelector("#degree");
 let btnn=document.querySelector("#theme");
 let units,degree;
@@ -59,7 +58,6 @@ let beloww=document.querySelector(".below");
 
 
 const fn=()=>{
-url1=`https://geocoding-api.open-meteo.com/v1/search?name=${search.value}&count=10&language=en&format=json`;
 let prom=fetch(url1);
 let resp=prom.then((res)=>{
       return res.json();
@@ -69,7 +67,6 @@ resp.then((data)=>{
     lat=data.results[0]['latitude'];
     long=data.results[0]['longitude'];
 }).then(()=>{
- let url2=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=${units}&appid=8c76a77c34be73d4dc01d005ad10bfea`;
 let promise=fetch(url2);
 let response=promise.then((res)=>{
     return res.json();

@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: content-box;
+}
+:root
+{
+      --nav-backcolor:rgba(255, 255, 255, 0.12);
+    --right-backcolor:#0A2250;
+    --display-backcolor:rgba(11, 44, 99, 0.85);
+    --gradient:linear-gradient(#021B4D,#123D7A,#4A9BE8);
+    --my-color: #a3d6fc;
+}
+
+.light{
+    --nav-backcolor:rgb(3, 36, 49);
+    --right-backcolor:rgb(215, 244, 255);
+    --display-backcolor:rgb(3, 36, 49);
+    --gradient:linear-gradient(
+    135deg,
+    #B8E7FF 0%,
+    #EAF6FF 50%,
+    #FFFFFF 100%
+);
+--my-color: #0A2250;
+}
+.nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 30px 10px 30px;
+    border-radius: 0.5rem;
+    border:2px solid rgba(255, 255, 255, 0.25);
+    background-color: var(--nav-backcolor);
+   /* background-color: rgba(255, 255, 255, 0.12); */
+    transform: translateY(-5PX);
+    transition: 0.5ms ease-out;
+}
+.nav-right{
+  display: flex;
+ gap:1rem;
+}
+.nav-right ul{
+    list-style-type: none;
+   /* background-color:#0A2250; */
+    background-color: var(--right-backcolor); 
+   color:var(--my-color);
+   font-weight: 600;
+   cursor:pointer;
+   transform: translateY(-10);
+   transition: 0.5ms ease-in;
+}
+.nav-right #choice-1{
+    display: none;
+   cursor:pointer;
+
+}
+.nav-right #choice-2{
+    display: none;
+       cursor:pointer;
+       transition: all 0.5s ease-in;
+
+}
+.nav-right ul li{
+    border:0.3px solid #fff;
+    padding:5px;
+    text-align: center;
+}
+.nav input{
+    height:2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+  outline:   none;
+    border:1px solid lightblue;
+    border-radius: 0.5rem;
+    /* background-color:#0A2250; */
+    background-color:var(--right-backcolor);
+    backdrop-filter: blur(10px);
+    color:var(--my-color);
+}
+input::placeholder{
+    color:#C7D2FE;
+}
+.nav button{
+    height:1.5rem;
+    font-size: 1rem;
+    border-radius:0.3rem;
+    padding: 5px;
+    border: none;
+    /* background-color:#0A2250; */
+    background-color: var(--right-backcolor);
+    /* color:#C7D2FE; */
+    color:var(--my-color);
+        border:1px solid lightblue;
+    font-weight:700;
+}
+button i{
+    margin-left:2px;
+}
+.display{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+      margin-top: 20px;
+    width:100%;
+    height:auto;
+    border-radius:0.5rem ;
+    /* border:2px solid black; */
+    /* background-color: rgba(11, 44, 99, 0.85); */
+    background-color: var(--display-backcolor);
+      border:2px solid rgba(255, 255, 255, 0.25);
+      padding:25px 0 15px 0;
+}
+
+.container{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image:linear-gradient(#021B4D,#123D7A,#4A9BE8); */
+    background-image: var(--gradient);
+    backdrop-filter: blur(10px);
+}
+
+.main{
+    width:90%;
+
+}
+.header{
+    color:var(--my-color);
+    opacity:3.2;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(173,216,255,0.5);
+    
+}
+.display .middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.desc .text-a ,.text-b{
+ color:#a3d6fc;   
+ font-size: 1.5rem;
+     text-shadow: 0 0 20px rgba(66, 150, 228, 0.5);
+}
+.desc .text-b{
+    margin-top: 8px;
+    font-size: 1rem;
+    color:#fff;
+}
+.fc{
+    font-size: 4rem;
+    color: #fff;
+}
+.below{
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    padding:5px;
+        font-family: 'Poppins', sans-serif;
+
+}
+.below .box{
+    width:20%;
+    margin:0px 5px 0px 5px;
+    height:3rem;
+ border:1px solid rgba(255, 255, 255, 0.25);
+    /* background-color: rgba(11, 44, 99, 0.85); */
+    background-color: var(--display-backcolor);
+    color:#fff;
+    font-size: 1rem;
+    text-align: center;
+}
+.below .icon{
+    padding:10px;
+    font-size: 1.3rem;
+}
+
+#location{
+    color:#fff;
+    font-size: 1.5rem;
+    padding-left:10px;
+    font-family: 'Poppins', sans-serif;
+
+}
+#temp{
+    color:#fff;
+    font-size: 15px;
+    padding-left:30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+

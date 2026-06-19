@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2c36cd0dd6.js" crossorigin="anonymous"></script>
+</head>
+<body >
+<div class="container ">
+    <div class="main">
+        <div class="header ">
+            <h1>Get Weather Detail</h1>
+        </div>
+        <div class="nav">
+            <div class="nav-left">
+            <input type="text" placeholder="search location" id="search">
+            </div>
+            <div class="nav-right">
+                <div class="choice">
+                <button id="Theme" onclick="openbtn(this)">Dark<i class="fa-solid fa-angle-down"></i></button>
+                    <!-- <ul id="choice-1">
+                        <li id="dark">Dark</li>
+                        <li id="light">Light</li>
+                    </ul> -->
+                </div>
+                <div class="choice">
+                  <button id="degree" onclick="openbtn(this)">&deg;C<i class="fa-solid fa-angle-down"></i></button>
+
+                    <ul id="choice-2">
+                        <li id="tempC">&deg;C</li>
+                        <li id="tempF">&deg;F</li>
+                    </ul>
+                 </div>
+                </div>
+
+            </div>
+           <div class="display">
+            <div class="above">
+                <div id="location"></div>
+                <div id="temp"></div>
+            </div>
+            <div class="middle">
+            <div class="desc">
+                <i class="fa-solid fa-cloud-sun-rain fc"></i>
+                <p class="text-a">Search for a location</p>
+                <p class="text-b">Enter city name to get current weather details</p>
+            </div>
+            </div>
+            <div class="below">
+                <div class="box" id="humid"></div>
+                <div  class="box" id="wind"></div>
+                <div  class="box" id="pressure"></div>
+                <div  class="box" id="visibility"></div>
+            </div>
+           </div>
+        </div>
+        <script src="weatherapi.js"></script>
+</body>
+</html>
